@@ -1,4 +1,4 @@
-package Model;
+package com.block6personcontrollers.Model;
 
 
 import lombok.AllArgsConstructor;

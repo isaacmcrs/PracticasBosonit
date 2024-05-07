@@ -1,7 +1,7 @@
-package Controller;
+package com.block6personcontrollers.Controller;
 
-import Model.Persona;
-import Service.ServicioPersona;
+import com.block6personcontrollers.Model.Persona;
+import com.block6personcontrollers.Service.ServicioPersona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

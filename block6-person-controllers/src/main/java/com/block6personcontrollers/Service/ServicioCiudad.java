@@ -1,6 +1,6 @@
-package Service;
+package com.block6personcontrollers.Service;
 
-import Model.Ciudad;
+import com.block6personcontrollers.Model.Ciudad;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

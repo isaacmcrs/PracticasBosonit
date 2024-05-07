@@ -1,6 +1,6 @@
-package Service;
+package com.block6personcontrollers.Service;
 
-import Model.Persona;
+import com.block6personcontrollers.Model.Persona;
 import org.springframework.stereotype.Service;
 
 @Service
