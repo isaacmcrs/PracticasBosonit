@@ -19,7 +19,9 @@ public class ConsultarPersonaController {
         Persona persona = personaService.obtenerPersonaPorNombre(nombre);
         if (persona != null) {
             return new ResponseEntity<>(persona, HttpStatus.OK);
+
         } else {
+
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }

@@ -17,13 +17,13 @@ public class PersonaService {
         return personaRepository.save(persona);
     }
 
-    public Persona modificarPersona(String nombre, Persona persona) {
+    public Persona modificarPersona(String nombre, Persona persona) throws NotFoundExceptions{
         Optional<Persona> personaOptional = personaRepository.findByNombre(nombre);
         if (personaOptional.isPresent()) {
             persona.setID(personaOptional.get().getID());
             return personaRepository.save(persona);
         }
-        return null; // O manejar de alguna forma el caso en el que la persona no exista
+        throw new NotFoundExceptions("No se ha ncontrado"); // O manejar de alguna forma el caso en el que la persona no exista
     }
 
     // Método para borrar una persona por su nombre
@@ -33,7 +33,7 @@ public class PersonaService {
     }
 
     // Método para obtener una persona por su nombre
-    public Persona obtenerPersonaPorNombre(String nombre) {
+    public Persona obtenerPersonaPorNombre(String nombre){
         Optional<Persona> personaOptional = personaRepository.findByNombre(nombre);
         return personaOptional.orElse(null);
     }
